@@ -1,0 +1,36 @@
+.hero {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+    &__content {
+        width: 55%;
+        padding-top: 50px;
+    h1 {
+        font-family: $title-font;
+        font-size: 80px;
+        line-height: 70px;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 30px;
+            span {
+                color: $color_red;
+            }
+        }
+    }    
+    &__description {
+        color: $color_grey2;
+        font-weight: 300;
+        font-size: 18px;
+        max-width: 80%;
+    }    
+
+    &__img {
+        width: 45%;
+        img {
+            max-width: 100%
+        };
+    }/*cierro img */
+
+}/*cierro hero*/

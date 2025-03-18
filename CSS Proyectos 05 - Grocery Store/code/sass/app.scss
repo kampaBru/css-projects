@@ -1,0 +1,109 @@
+@import './abstracts/abstracts';
+@import './vendors/vendors';
+@import './base/base';
+@import './components/components';
+@import './layout/layout';
+@import './pages/pages';
+@import './themes/themes';
+@import 'settings';
+
+
+
+
+body {
+    border: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    
+  }
+  .container {
+    max-width: var(--max-width-page);
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  header{
+    padding-top: 25px;
+    padding-left: 120px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  
+  }
+  .header_menu{
+    width: 50%;
+  }
+  .header_menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    list-style: none;
+  }
+  .header_menu ul li a{
+    text-decoration: none;
+  }
+  .header_login{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    
+  }
+  .header_login ul{
+    margin-left: 100px;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+  }
+  .header_login ul li{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .header_login ul li a{
+    text-decoration: none;
+  }
+  gin ul li:last-child{
+    margin-left: auto;
+  }
+  .header_login .login_button{
+    background-color: var(--color_red);
+    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 40px;
+    border-radius: 15px;
+    color: white;
+  }
+  .hero__content {
+    width: 100%;
+    color: var(--color_black);
+    margin-bottom: 60px;
+    
+  }
+  
+  .hero__content h1{
+    font-family: var(--font-monserrat);
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    width: 50%;
+  }
+  .hero__content h1 .color_orange{
+    color: var(--color_red);
+  }
+  .hero__content p{
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color_grey2);
+    line-height: 40px;
+  }
+  .hero__img {
+    max-width: 40%;
+  }

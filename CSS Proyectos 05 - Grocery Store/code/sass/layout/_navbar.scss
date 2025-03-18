@@ -1,0 +1,26 @@
+nav.nav__primary {
+    ul {
+        @include reset-list();
+        gap: 50px;
+        a {
+            color: $color_grey2;
+            font-weight: 300;
+            text-decoration: none;
+            /* para crear la línea que aparece debajo del menú*/
+            &.active,
+            &:hover {
+                color: $color_red;
+                position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                height: 2px;
+                background-color: $color_red;
+                width: 80%;
+                bottom: -10px;
+                left: 10%;
+            }    
+            }
+        }
+    }
+}

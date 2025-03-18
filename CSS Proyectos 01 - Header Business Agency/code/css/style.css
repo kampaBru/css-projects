@@ -1,0 +1,248 @@
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+
+
+/* EMPEZAMOS LA PG*/
+
+body {
+
+  background-image: url("../img/hero@2x.jpg");
+  background-position: top right;
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 20px ;
+
+}
+.page {
+  max-width: 1400px;
+  max-height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center; /*alinear con el logo*/
+}
+header figcaption { /*para no ver la descripción */
+  display: none;
+}
+header figure {
+  margin: 0;
+}
+header figure img {
+  margin-left: 120px;
+}
+
+header nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 56px;
+}
+header nav ul li{
+
+}
+
+header nav ul a {
+  font-family: "Bebas Neue", sans-serif;
+  color: #424241;
+  text-decoration: none;
+
+}
+.hero__content {
+  max-width: 60%;
+  margin-bottom: 40px;
+}
+.hero h1{ /*copiado de figma */
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 130px;
+  font-style: normal;
+  line-height: 110px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: 0;
+
+
+  
+}
+.hero h1 span {
+  color: #7EDAD2;
+
+}
+.hero__content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 40px;
+  padding: 10px;
+  color: var(--tex-and-main-gray-2, #909090);
+  max-width: 600px;
+  margin-bottom: 10px;
+  
+}
+.hero__content a {
+  display: inline-block;
+  color: white;
+  background-color: #7EDAD2;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  gap: 10px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: none;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+
+}
+.hero__content a:hover {
+  background-color: #376b67;
+}
+
+/* --------------------------------------------*/
+.hero_numbrers {
+  display: flex;
+  justify-content: space-between;
+  max-width: 480px;
+  color: #909090;
+  margin-bottom: 40px;
+}
+.hero_numbrers div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero_numbrers .hero_numbrer {
+  color:#424241;
+  font-family: Bebas Neue;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 57.6px;
+  text-align: left;
+}
+/* ------------------------------------------------ */
+.categories {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  
+}
+.categories article{
+  background-color: white;
+  padding: 20px;
+}
+
+.categories img {
+  height: 35px;
+  padding: 0;
+  margin-bottom: 0;
+  
+  
+}
+.categories article h3 {
+  color: var(--text-and-main-black, #424241);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+  margin: 0;
+  margin: 8px 0;
+
+}
+.categories article p {
+  color:  #909090;
+  margin-top: 0;
+  padding: 5px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: left;
+  margin-bottom: 5px;
+
+}
+
