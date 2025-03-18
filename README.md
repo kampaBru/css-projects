@@ -1,6 +1,6 @@
 # 🌟 CSS Projects 🚀  
 
-Bienvenido a mi repositorio de **proyectos y ejercicios de CSS**. Aquí encontrarás todos los trabajos prácticos que he realizado durante mi formación en **Full Stack Developer**.  
+Bienvenido a mi repositorio de **proyectos y ejercicios de CSS**. Aquí encontrarás todos los trabajos prácticos que he realizado durante mi formación en **Full Stack**.  
 
 ⚠️ **Estado del repositorio:** En construcción 🚧  
 Algunos ejercicios aún están en desarrollo y falta añadir el **proyecto final**.  
