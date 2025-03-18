@@ -1,64 +1,159 @@
-/* Estilos generales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
 }
 
-/* Centrar todo en la página */
-body, html {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif
-  background-color: #f0f0f0;
+header {
+    background-color: #24292f;
+    color: white;
+    text-align: center;
+    padding: 2rem;
 }
 
-/* Contenedor principal */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-/* El redondel */
-.circle {
-  width: 500px;
-  height: 500px;
-  background-color: blue; 
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
+h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
 }
 
-/* El h1 dentro del círculo */
-.circle h1 {
-  font-size: 24px;
-  color: white;
-  margin-bottom: 20px;
+footer {
+    background-color: #24292f;
+    color: white;
+    text-align: left;
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Estilos del menú de navegación */
-nav ul {
-  list-style-type: none;
+.carouser {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul li {
-  margin: 10px 0;
+.projects-container {
+    display: flex;
+    overflow-x: auto; /* Permite el scroll horizontal */
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
+    white-space: nowrap;
+}
+/* Ocultar barra de desplazamiento en Chrome */
+.projects-container::-webkit-scrollbar {
+    display: none;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
+/* Flechas de navegación */
+.arrow {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+    border-radius: 50%;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+/* Posiciones de las flechas */
+.left {
+    left: 10px;
 }
+
+.right {
+    right: 10px;
+}
+
+/* Hover de las flechas */
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+.project {
+    flex-shrink: 0;
+    width: 300px;
+    /*height: 400px;*/
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center; */
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #24292f;
+
+}
+
+.project-card .description {
+    flex-grow: 1;
+    /*min-height: 60px;*/
+    max-height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+    white-space: normal;
+    word-wrap: break-word; /* Permite que las palabras largas se dividan */
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Máximo 5 líneas visibles */
+    -webkit-box-orient: vertical;
+}
+
+.project-card .button {
+   /* display: inline-block;
+    margin-top: 1rem;*/
+    padding: 10px 15px;
+    background-color: #24292f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.project-card .button:hover {
+    background-color: #070707;
+}
+
